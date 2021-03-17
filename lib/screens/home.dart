@@ -2,6 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+//Local imports
+import 'package:qr_inventory/services/auth.dart';
+
 class Home extends StatefulWidget {
   final FirebaseAuth auth;
   final FirebaseFirestore firestore;
@@ -19,7 +22,11 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: const Text("QR Inv Home"),
         actions: [
-          IconButton(icon: const Icon(Icons.exit_to_app), onPressed: () {})
+          IconButton(
+              icon: const Icon(Icons.exit_to_app),
+              onPressed: () {
+                Auth(auth: widget.auth).signOut();
+              })
         ],
       ),
     );

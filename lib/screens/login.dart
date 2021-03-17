@@ -39,12 +39,14 @@ class _LoginState extends State<Login> {
                     key: const ValueKey("username"),
                     textAlign: TextAlign.center,
                     decoration: const InputDecoration(hintText: "Username"),
+                    controller: _emailController,
                   ),
                   TextFormField(
                     key: const ValueKey("password"),
                     obscureText: true,
                     textAlign: TextAlign.center,
                     decoration: const InputDecoration(hintText: "Password"),
+                    controller: _passwordController,
                   ),
                   const SizedBox(height: 20),
                   //*BUTTONS
