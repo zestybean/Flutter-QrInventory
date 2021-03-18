@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-//
+//Local imports
 import 'screens/home.dart';
 import 'screens/login.dart';
 import 'services/auth.dart';
@@ -39,7 +39,8 @@ class App extends StatelessWidget {
 
           // Otherwise, show something whilst waiting for initialization to complete
           return const Scaffold(
-            body: Center(child: Text("Loading...")),
+            //Loading...
+            body: Center(child: CircularProgressIndicator()),
           );
         },
       ),
@@ -74,7 +75,8 @@ class _RootState extends State<Root> {
           }
         } else {
           return const Scaffold(
-            body: Center(child: Text("Loading...")),
+            //Loading...
+            body: Center(child: CircularProgressIndicator()),
           );
         }
       }, //Auth stream
