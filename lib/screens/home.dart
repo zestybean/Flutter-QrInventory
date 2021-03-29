@@ -48,7 +48,8 @@ class _HomeState extends State<Home> {
                 setState(() {
                   Database(firestore: widget.firestore).addInventoryItem(
                     uid: widget.auth.currentUser.uid,
-                    props: {_inventoryController.text: "item"},
+                    itemName: "test",
+                    props: {"test": "item"},
                   );
                   _inventoryController.clear();
                 });

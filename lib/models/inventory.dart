@@ -13,6 +13,6 @@ class Inventory {
   Inventory.fromDocumentSnapshots({DocumentSnapshot documentSnapshot}) {
     inventoryId = documentSnapshot.id;
     inventoryItems =
-        documentSnapshot.data()['inventory'] as List<InventoryItem>;
+        documentSnapshot.data()['inventoryItems'] as List<InventoryItem>;
   }
 }

@@ -15,12 +15,14 @@ class Database {
           .snapshots()
           .map((query) {
         List<InventoryItem> retVal;
-
         for (final DocumentSnapshot doc in query.docs) {
           retVal.add(
             InventoryItem.fromDocumentSnapshots(documentSnapshot: doc),
           );
+
+          print(retVal.length);
         }
+
         return retVal;
       });
     } catch (e) {
